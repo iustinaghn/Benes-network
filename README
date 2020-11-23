@@ -1,0 +1,21 @@
+Nume: Ghenea Iustina
+
+======= Laborator 4 ============
+
+Reteaua Benes
+
+Implementare:
+
+Se folosesc 2 vectori pentru permutarile directe si inverse si o matrice pt starea switch-ului
+(0 => ascendent, 1 => descendent) si un vector pt drumul prin retea.
+
+Se folosete algoritmul DFS pt cel mai scurt drum.
+
+Reteaua Benes este un vector coloana de intrari. 
+Pe primul rand se gasesc 2 ^ (n - 1) astfel incat switchul i primeste date de la procesoarele 2i si 2i+1
+Se aplica perfect shuffle permutation pt firele de la iesirea primului rand de switchuri si la intrarea
+celui de al doilea rand. Ce avem la iesirea i pe randul j se conecteaza cu i rotit la dreapta cu un bit 
+pe randul j + 1 .
+Daca avem n > 2 atunci continuam cu urmatorul rand de switchuri, aplicand aceeasi formula recursiv.
+
+Pentru ultimul rand de switchuri se aplica inverse shuffle permutation pt outputuri.
